@@ -44,3 +44,7 @@ export function ProviderGlyph({
 export function providerLabel(provider: StreamProvider): string {
   return provider === "twitch" ? "Twitch" : "YouTube";
 }
+
+export function providerAccentClass(provider: StreamProvider): string {
+  return provider === "twitch" ? "text-twitch" : "text-youtube";
+}

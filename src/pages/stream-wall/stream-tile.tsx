@@ -2,7 +2,11 @@ import { Eye, Maximize2 } from "lucide-react";
 import { useState } from "react";
 
 import type { LiveStreamer } from "@/api/live-feed";
-import { ProviderGlyph, providerLabel } from "@/components/app/provider-glyph";
+import {
+  ProviderGlyph,
+  providerAccentClass,
+  providerLabel,
+} from "@/components/app/provider-glyph";
 import { cn } from "@/lib/utils";
 import {
   formatLiveDuration,
@@ -10,6 +14,7 @@ import {
   hueFromName,
   monogram,
 } from "@/pages/stream-wall/format";
+import { ScreenOverlay } from "@/pages/stream-wall/screen-overlay";
 import { TallyLight } from "@/pages/stream-wall/tally-light";
 
 interface StreamTileProps {
@@ -81,10 +86,7 @@ export function StreamTile({
         </div>
       )}
 
-      {/* Scanlines, hover scrim + a thin bezel inset — layered, not a card. */}
-      <div className="screen-scanlines pointer-events-none absolute inset-0 opacity-40" />
-      <div className="screen-scrim pointer-events-none absolute inset-0 opacity-65 transition-opacity duration-300 group-hover:opacity-90 motion-reduce:transition-none" />
-      <div className="pointer-events-none absolute inset-0 ring-1 ring-white/5 ring-inset" />
+      <ScreenOverlay />
 
       {/* Top: tally light + channel id / provider, always on but quiet. */}
       <div className="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-between p-3 sm:p-3.5">
@@ -95,7 +97,7 @@ export function StreamTile({
             provider={streamer.provider}
             className={cn(
               "size-4 drop-shadow",
-              streamer.provider === "twitch" ? "text-twitch" : "text-youtube",
+              providerAccentClass(streamer.provider),
             )}
           />
         </div>

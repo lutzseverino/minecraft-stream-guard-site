@@ -5,8 +5,12 @@ import { buildEmbedTarget } from "@/api/embeds";
 import type { LiveStreamer } from "@/api/live-feed";
 import { AppButton } from "@/components/app/app-button";
 import { AppIconButton } from "@/components/app/app-icon-button";
-import { ProviderGlyph, providerLabel } from "@/components/app/provider-glyph";
-import { TallyLight } from "@/pages/stream-wall/tally-light";
+import {
+  ProviderGlyph,
+  providerAccentClass,
+  providerLabel,
+} from "@/components/app/provider-glyph";
+import { StationIdent } from "@/pages/stream-wall/station-ident";
 
 interface StreamEmbedProps {
   streamer: LiveStreamer;
@@ -52,21 +56,7 @@ export function StreamEmbed({ streamer, onBack }: StreamEmbedProps) {
         </AppIconButton>
       </div>
 
-      {/* Floating identity — reads like a station ident, no boxed card. */}
-      <div className="pointer-events-none absolute top-[max(1rem,env(safe-area-inset-top))] right-[max(1rem,env(safe-area-inset-right))] z-10 flex max-w-[calc(100vw-5.5rem)] items-center gap-2.5 rounded-full bg-black/45 px-3.5 py-2 backdrop-blur-md">
-        <TallyLight />
-        <span className="truncate text-sm font-semibold text-white">
-          {streamer.playerName}
-        </span>
-        <ProviderGlyph
-          provider={streamer.provider}
-          className={
-            streamer.provider === "twitch"
-              ? "size-4 text-twitch"
-              : "size-4 text-youtube"
-          }
-        />
-      </div>
+      <StationIdent streamer={streamer} />
     </div>
   );
 }
@@ -76,11 +66,7 @@ function LinkFallback({ streamer }: { streamer: LiveStreamer }) {
     <div className="flex size-full flex-col items-center justify-center gap-6 px-6 text-center">
       <ProviderGlyph
         provider={streamer.provider}
-        className={
-          streamer.provider === "twitch"
-            ? "size-12 text-twitch"
-            : "size-12 text-youtube"
-        }
+        className={`size-12 ${providerAccentClass(streamer.provider)}`}
       />
       <div className="space-y-2">
         <p className="text-lg font-semibold text-white">

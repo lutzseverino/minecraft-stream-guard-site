@@ -1,119 +1,90 @@
-# StreamGuard — Live Wall
+<div align="center">
+    <h1 align="center">StreamGuard Site</h1>
+    <p>A fullscreen live stream wall for Minecraft survival communities using StreamGuard.</p>
+    <p>
+        <img alt="site" src="https://img.shields.io/badge/site-vite-111827">
+        <img alt="frontend" src="https://img.shields.io/badge/frontend-react-1f2937">
+        <img alt="ui" src="https://img.shields.io/badge/ui-shadcn-374151">
+        <img alt="quality" src="https://img.shields.io/badge/quality-biome-4b5563">
+        <img alt="license" src="https://img.shields.io/badge/license-GPL--3.0--only-6b7280">
+    </p>
+</div>
 
-A full-screen live **stream wall** for Minecraft server communities, and the
-companion site for the StreamGuard Paper/Spigot plugin. The plugin tracks which
-players are live on Twitch and YouTube; this site turns that feed into a
-broadcast-style multiviewer.
+## Overview
 
-The entire viewport is the product. No navbar, no sidebar, no marketing
-sections — every live streamer is a monitor on a gap-free wall. Click a monitor
-to open it fullscreen; when nobody is live, the wall shows a broadcast
-"no signal" test card.
+StreamGuard Site is the companion live wall for the StreamGuard Paper/Spigot plugin. The plugin
+publishes the players currently live on Twitch or YouTube; this site renders them as a fullscreen,
+gap-free broadcast wall.
 
-## Design concept — "The Gallery"
+The viewport is the product: no navbar, no sidebar, and no marketing surface. Each live streamer is
+a screen. Click a screen to open the provider embed fullscreen; when nobody is live, the wall shows a
+broadcast-style no-signal state.
 
-The visual language is a broadcast control-room multiviewer: a graphite surround
-(the colour of a real monitor rack), **tally red** as the one loud colour for
-on-air/live status, and **UMD amber** for channel numbers and data, after the
-under-monitor displays on a video wall. Channel numbering is meaningful here —
-multiviewer inputs are genuinely numbered. The signature element is the
-SMPTE-style colour-bars empty state.
+## Project
 
-Type pairs **Oswald** (condensed broadcast gothic) for display, **Geist Mono**
-for telemetry/UMD labels, and **Geist** for the sparse body copy.
+- `src/api/` contains the framework-free live feed and embed contracts.
+- `src/components/ui/` contains generated shadcn/ui primitives. Keep these primitive and wrap them
+  from `src/components/app/` when project styling or behavior is needed.
+- `src/components/app/` contains StreamGuard-owned component wrappers and small app-level UI pieces.
+- `src/pages/stream-wall/` contains the wall experience, page-local components, hooks, and layout
+  math.
+- `src/theme/` contains CSS theme tokens and the theme provider.
 
-## Stack
+The visual language is a broadcast control-room multiviewer: graphite screens, tally red for live
+state, UMD amber for channel data, and a SMPTE-style empty state. There is no public runtime theme
+configuration layer; customize the site by editing tokens, wrappers, or page components.
 
-- Vite + React + TypeScript (strict)
-- Tailwind CSS v4 (`@tailwindcss/vite`)
-- shadcn/ui primitives under `src/components/ui`, project wrappers under
-  `src/components/app`
-- `@/` import alias, `cn` in `src/lib/utils.ts`
-- Theme tokens live in CSS (`src/theme/tokens.css`) — there is **no public
-  runtime config file**. Customize by editing the tokens, the shadcn primitives,
-  or the Tailwind classes.
+## Getting Started
 
-## Scripts
+Install dependencies from the project root:
 
 ```bash
-npm install      # install dependencies
-npm run dev      # start the Vite dev server
-npm run check    # lint, typecheck, test, architecture check, and build
-npm run build    # typecheck (tsc -b) + production build
-npm run preview  # preview the production build
-npm run typecheck
+npm install
 ```
 
-## Quality gates
+Run the development server:
 
-- `npm run lint` runs Biome, matching the broader Polity toolchain.
-- `npm run test:run` covers the pure feed, embed, and wall-layout contracts.
-- `npm run check:architecture` keeps API, UI primitive, app wrapper, theme, and
-  page boundaries from drifting into each other.
-- `npm run check` runs the full local release gate.
+```bash
+npm run dev
+```
 
-## How it works
+Build and preview the production bundle:
 
-### The feed
+```bash
+npm run build
+npm run preview
+```
 
-`src/api/live-feed.ts` defines the framework-free domain model (`LiveFeed`,
-`LiveStreamer`, `StreamEmbed`) and a `LiveFeedClient` that fetches and normalizes
-`/api/live`. It tolerates loosely-typed JSON from the plugin and infers embed
-metadata when it isn't explicit.
+## Quality Checks
 
-In development, if the endpoint is unreachable, the client falls back to a
-realistic local demo feed (`src/pages/stream-wall/demo-feed.ts`) so the UI is
-always inspectable. Production never silently shows demo data.
+```bash
+npm run check
+npm run lint
+npm run typecheck
+npm run test:run
+npm run check:architecture
+```
 
-`src/pages/stream-wall/use-live-feed.ts` is the React binding — it polls the
-feed and exposes a manual refresh.
+`npm run check` is the local release gate. It runs Biome, TypeScript, Vitest, dependency-cruiser,
+and a production build.
 
-### Layout
+The quality stack is layered by ownership:
 
-`src/pages/stream-wall/stream-layout.ts` is pure, React-free packing math: given
-a stream count and the viewport aspect ratio, it picks the column/row grid that
-keeps tiles closest to 16:9, then distributes any partial final row so the grid
-fills the viewport edge-to-edge with **no gaps** (e.g. 3 sources render as two
-on top and one full-width below). It's isolated from rendering so the packing
-behavior is easy to reason about and test.
+- Formatting and linting: Biome for TypeScript, React, CSS, JSON, and config files.
+- Correctness: TypeScript strict checks and focused Vitest coverage for feed, embed, and layout
+  behavior.
+- Architecture: dependency-cruiser keeps API, UI primitive, app wrapper, theme, and page boundaries
+  from drifting into each other.
+- Build verification: Vite production build with relative asset paths for simple static hosting.
 
-### Embeds
+## Plugin Feed
 
-`src/api/embeds.ts` holds the provider-specific embed logic, isolated from React.
+The site reads the StreamGuard plugin feed from `/api/live`. In development, `vite.config.ts`
+proxies that path to `http://127.0.0.1:8127`. If the local plugin endpoint is unavailable, the
+development build uses a demo feed so the wall remains inspectable. Production builds do not silently
+show demo data.
 
-- **Twitch** player iframes require a `parent` host. Rather than expose a runtime
-  config file, the parent hosts are derived from `window.location.hostname` at
-  call time, with a source-level fallback list (`TWITCH_PARENT_FALLBACK_HOSTS`).
-  Add your production domain there if you ever serve the wall somewhere the
-  runtime hostname can't be detected.
-- **YouTube** embeds support a direct video id or a channel `live_stream` player.
-  When only a channel is known with no embeddable id, the fullscreen view
-  degrades to a clear provider link instead of a broken frame.
-
-Video is never proxied — iframes point straight at the provider.
-
-### Tiles only load the player when opened
-
-The wall renders the "source" treatment first (provider thumbnail, or a
-generated screen surface with a monogram when no thumbnail is present — no stock
-imagery). Each tile carries a tally light, channel number, provider mark, and an
-under-monitor display with the player name; title and viewer stats reveal on
-hover/focus. Only when a monitor is opened does the real Twitch/YouTube iframe
-load.
-
-## Accessibility & responsiveness
-
-- Tiles are real buttons: open with click / Enter / Space; `Escape` returns to
-  the wall, and focus is restored to the originating monitor.
-- Icon-only floating controls have `aria-label`s and tooltips.
-- The grid reflows from a single full-screen monitor up to a balanced many-up
-  wall, and collapses to a single stacked column in portrait / on mobile.
-- Visible keyboard focus rings; safe-area insets respected for notched displays.
-
-## Connecting the real plugin
-
-Serve the StreamGuard plugin's feed at `/api/live` (same origin, or proxy it in
-`vite.config.ts` for local development). Expected shape:
+Expected shape:
 
 ```jsonc
 {
@@ -121,22 +92,25 @@ Serve the StreamGuard plugin's feed at `/api/live` (same origin, or proxy it in
   "streamers": [
     {
       "playerName": "RedstoneRhea",
-      "provider": "twitch",            // "twitch" | "youtube"
+      "provider": "twitch",
       "channel": "redstonerhea",
       "url": "https://twitch.tv/redstonerhea",
       "title": "Building a trading hall",
-      "thumbnailUrl": "https://…",      // optional
-      "viewerCount": 1284,              // optional
-      "liveSince": "2026-06-26T10:24:00Z", // optional
+      "thumbnailUrl": "https://example.com/thumbnail.jpg",
+      "viewerCount": 1284,
+      "liveSince": "2026-06-26T10:24:00Z",
       "embed": { "kind": "twitch", "channel": "redstonerhea" }
     }
   ]
 }
 ```
 
-`embed` is optional — the client infers it from `provider`/`channel`/`url` when
-omitted.
+`embed` is optional. The client infers provider embed metadata from `provider`, `channel`, and `url`
+when enough information is present.
 
-## License
+## Documentation
 
-GPL-3.0-only. See `LICENSE`.
+- [License](LICENSE)
+- [Source entrypoint](src/pages/stream-wall/stream-wall-page.tsx)
+- [Feed client](src/api/live-feed.ts)
+- [Layout model](src/pages/stream-wall/stream-layout.ts)
