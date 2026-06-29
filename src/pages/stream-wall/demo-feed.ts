@@ -15,7 +15,7 @@ export function createDemoFeed(): LiveFeed {
     updatedAt: new Date().toISOString(),
     streamers: [
       {
-        playerName: "RedstoneRhea",
+        playerName: "Tommy",
         provider: "twitch",
         channel: "redstonerhea",
         url: "https://twitch.tv/redstonerhea",
@@ -25,7 +25,7 @@ export function createDemoFeed(): LiveFeed {
         embed: { kind: "twitch", channel: "redstonerhea" },
       },
       {
-        playerName: "Cavebound",
+        playerName: "Nicolás",
         provider: "youtube",
         channel: "@cavebound",
         url: "https://youtube.com/watch?v=jfKfPfyJRdk",
@@ -35,7 +35,7 @@ export function createDemoFeed(): LiveFeed {
         embed: { kind: "youtube-video", videoId: "jfKfPfyJRdk" },
       },
       {
-        playerName: "miravale",
+        playerName: "Jasper",
         provider: "twitch",
         channel: "miravale",
         url: "https://twitch.tv/miravale",
@@ -45,21 +45,18 @@ export function createDemoFeed(): LiveFeed {
         embed: { kind: "twitch", channel: "miravale" },
       },
       {
-        playerName: "BastionByte",
+        playerName: "Eloi",
         provider: "youtube",
         channel: "@bastionbyte",
         url: "https://youtube.com/@bastionbyte",
-        title: "PvP practice — crystal & sword",
+        title: "minecraft xD! Hola.",
         viewerCount: 95,
         liveSince: minutesAgo(54),
-        // Channel-only: no concrete video id, exercises the channel embed path.
-        embed: {
-          kind: "youtube-channel",
-          channelId: "UC_x5XG1OV2P6uZZ5FSM9Ttw",
-        },
+        // Channel-only: no concrete video id, exercises the link fallback path.
+        embed: { kind: "link" },
       },
       {
-        playerName: "tinkerfox",
+        playerName: "Pepe",
         provider: "twitch",
         channel: "tinkerfox",
         url: "https://twitch.tv/tinkerfox",

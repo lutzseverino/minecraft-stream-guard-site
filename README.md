@@ -17,6 +17,16 @@ checks whether survival players are live on Twitch or YouTube.
 The site reads the plugin's live feed and turns the current streamers into a fullscreen broadcast
 wall. Every live player becomes a screen; selecting a screen opens the Twitch or YouTube embed.
 
+## Screenshots
+
+Captured from the local development demo feed.
+
+![Live wall grid](public/screenshots/live-wall-grid.png)
+
+| Focused stream | Mobile wall |
+| --- | --- |
+| ![Focused stream](public/screenshots/focused-stream.png) | ![Mobile wall](public/screenshots/mobile-wall.png) |
+
 ## Getting Started
 
 Install dependencies from the project root:
