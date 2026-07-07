@@ -26,5 +26,7 @@ dist-ssr
 *.tsbuildinfo
 
 # Local agent/tooling metadata
-.agents/
+.agents/*
+!.agents/skills/
+!.agents/skills/**
 skills-lock.json
