@@ -2,20 +2,26 @@
   "name": "minecraft-stream-guard-site",
   "private": true,
   "version": "0.1.0",
+  "packageManager": "npm@11.6.2",
   "type": "module",
   "description": "Full-screen live stream wall for StreamGuard — a Minecraft Paper/Spigot plugin.",
   "license": "GPL-3.0-only",
   "scripts": {
     "build": "tsc -b && vite build",
-    "check": "npm run lint && npm run typecheck && npm run test:run && npm run check:architecture && npm run build",
+    "check": "npm run lint && npm run lint:ts && npm run typecheck && npm run test:run && npm run check:architecture && npm run check:docs && npm run build",
     "check:architecture": "depcruise --config dependency-cruiser.cjs src",
+    "check:docs": "node scripts/check-docs.mjs",
     "dev": "vite",
     "format": "biome check . --write",
     "lint": "biome check .",
+    "lint:ts": "eslint --config eslint.config.mjs --max-warnings 0 .",
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
     "typecheck": "tsc -b"
+  },
+  "engines": {
+    "node": ">=24"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.9",
@@ -36,10 +42,15 @@
     "vite": "^8.0.16"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.1",
+    "@biomejs/biome": "2.5.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "8.61.1",
+    "@typescript-eslint/parser": "8.61.1",
     "dependency-cruiser": "^18.0.0",
+    "eslint": "9.39.1",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.3",
     "typescript": "^5.9.3",
     "vitest": "^4.1.9"
   }

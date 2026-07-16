@@ -1,21 +1,19 @@
 <div align="center">
-    <h1 align="center">StreamGuard Site</h1>
-    <p>A fullscreen live stream wall for servers using the StreamGuard Minecraft plugin.</p>
-    <p>
-        <img alt="site" src="https://img.shields.io/badge/site-vite-111827">
-        <img alt="frontend" src="https://img.shields.io/badge/frontend-react-1f2937">
-        <img alt="ui" src="https://img.shields.io/badge/ui-shadcn-374151">
-    </p>
+  <h1>StreamGuard Site</h1>
+  <p>A fullscreen live stream wall for servers using the StreamGuard Minecraft plugin.</p>
+
+  [![CI](https://github.com/lutzseverino/minecraft-stream-guard-site/actions/workflows/ci.yml/badge.svg)](https://github.com/lutzseverino/minecraft-stream-guard-site/actions/workflows/ci.yml)
+  [![License: GPL-3.0-only](https://img.shields.io/badge/license-GPL--3.0--only-2f3437)](LICENSE)
 </div>
 
-## Overview
-
 StreamGuard Site is a companion web surface for
-[StreamGuard](https://github.com/lutzseverino/minecraft-stream-guard), a Paper/Spigot plugin that
-checks whether survival players are live on Twitch or YouTube.
+[StreamGuard](https://github.com/lutzseverino/minecraft-stream-guard), a
+Paper/Spigot plugin that checks whether survival players are live on Twitch or
+YouTube.
 
-The site reads the plugin's live feed and turns the current streamers into a fullscreen broadcast
-wall. Every live player becomes a screen; selecting a screen opens the Twitch or YouTube embed.
+The site reads the plugin's live feed and turns the current streamers into a
+fullscreen broadcast wall. Every live player becomes a screen; selecting a
+screen opens the Twitch or YouTube embed.
 
 ## Screenshots
 
@@ -27,26 +25,23 @@ Captured from the local development demo feed.
 | --- | --- |
 | ![Focused stream](public/screenshots/focused-stream.png) | ![Mobile wall](public/screenshots/mobile-wall.png) |
 
-## Getting Started
+## Development
 
-Install dependencies from the project root:
-
-```bash
-npm install
-```
-
-Run the development server:
+Install Node.js 24 and npm 11.6.2, then:
 
 ```bash
+npm ci
 npm run dev
 ```
 
-Build and preview the production bundle:
+Run the canonical local gate before opening a pull request:
 
 ```bash
-npm run build
-npm run preview
+npm run check
 ```
+
+The gate runs Biome, typed ESLint, TypeScript, Vitest,
+dependency-cruiser, and a production build.
 
 ## Plugin Feed
 
@@ -57,20 +52,11 @@ The site reads `/api/live`, served by the
 When the plugin is not running, development builds use a demo feed so the wall remains inspectable.
 Production builds expect the real plugin feed.
 
-## Quality Checks
+## Documentation
 
-```bash
-npm run check
-npm run lint
-npm run typecheck
-npm run test:run
-```
+Start with the [documentation index](docs/README.md). Documentation is organized
+by reader intent so durable guidance has one predictable home.
 
-`npm run check` is the local release gate. It runs Biome, TypeScript, Vitest, dependency-cruiser,
-and a production build.
+## License
 
-## Links
-
-- [Minecraft plugin](https://github.com/lutzseverino/minecraft-stream-guard)
-- [Feed client](src/api/live-feed.ts)
-- [Wall page](src/pages/stream-wall/stream-wall-page.tsx)
+StreamGuard Site is available under the [GNU General Public License v3.0](LICENSE).

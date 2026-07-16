@@ -96,7 +96,7 @@ export function buildEmbedTarget(
       };
     }
 
-    default:
+    case "link":
       return { linkOnly: true, allowAutoplay: false };
   }
 }

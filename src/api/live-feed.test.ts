@@ -33,7 +33,7 @@ describe("normalizeFeed", () => {
 describe("LiveFeedClient", () => {
   it("uses the development fallback only when enabled", async () => {
     const client = new LiveFeedClient({
-      fetchImpl: (() => Promise.reject(new Error("offline"))) as typeof fetch,
+      fetchImpl: () => Promise.reject(new Error("offline")),
       fallbackFeed: () => ({
         updatedAt: "2026-06-26T12:00:00Z",
         streamers: [],
