@@ -13,7 +13,7 @@
     "profile": "standard",
     "platform": "github"
   },
-  "inspection": "sha256:dd6be8c7409b09cedbd2fbfa74f1c1096edf751bdf32b5108066ef3a99451b2f",
+  "inspection": "sha256:fa714da41d174dcb4c6a3f15493f683d7af0fde82720765170b3fb4a0d486697",
   "files": {
     "docs/agents/README.md": {
       "sha256": "6d85984e4f6ae21c5d08f58bc37e260e11661beb7da481696483e635d5c9b502",
@@ -1004,11 +1004,11 @@
       "executable": false
     },
     ".repo-standards/inputs/resolved.json": {
-      "sha256": "45230387a926a46e18e33a5e23b9ada986fabde52169865083f8ff16e9a262d3",
+      "sha256": "a2ffd823fb1dd7960dcc43a3a224b472090c38537d89cb43968cb505e20cc2a7",
       "executable": false
     },
     ".repo-standards/inputs/scope-history.json": {
-      "sha256": "2d1b767f7bf66c5cc0ef8b10125bbe65f564bb965531aaeb565368c6d5b3bed2",
+      "sha256": "3949c73f3db699503e049fdc8b6c6399191efb5da977d92f085b50eadafd886f",
       "executable": false
     },
     ".repo-standards/rules/documentation.md": {
@@ -1039,8 +1039,12 @@
       "sha256": "2965277f0a8436f69dbeb1573dc2c905e519229ab38a26cda2599a0f11233952",
       "executable": false
     },
+    ".repo-standards/rules/typescript-vite-stack.md": {
+      "sha256": "ef7f2b9a05d59cb8dda6ca41e58a4b09c841f117f592c678473c83894fc0910f",
+      "executable": false
+    },
     ".repo-standards/rules/README.md": {
-      "sha256": "5187c31f6032cf94c1b60fce70f3c067f97e696a7294ab071b6d501c4bd598cb",
+      "sha256": "3d303beb1f647299a3c4946188c05856e00d41a0ad8ced5c6dad762e156eab5a",
       "executable": false
     },
     ".repo-standards/selection.yaml": {
@@ -1065,7 +1069,7 @@
     }
   },
   "state": {
-    "sha256": "47c5a503cf5222fd0de4bb34da8448229cd80d7adbe833b2677c1cdb6d90f93f",
+    "sha256": "e3570c4f50a23a8d348c0b4ef5d0cd9263af4c949d63eea670a9cd17bc609970",
     "executable": false
   }
 }
