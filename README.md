@@ -2,8 +2,8 @@
   <h1>StreamGuard Site</h1>
   <p>A fullscreen live stream wall for servers using the StreamGuard Minecraft plugin.</p>
 
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
-  [![Node.js 24](https://img.shields.io/badge/Node.js-24-green)](https://nodejs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-7-blue)](https://www.typescriptlang.org/)
+  [![Node.js 24 | 26](https://img.shields.io/badge/Node.js-24%20%7C%2026-green)](https://nodejs.org/)
   [![CI](https://github.com/lutzseverino/minecraft-stream-guard-site/actions/workflows/ci.yml/badge.svg)](https://github.com/lutzseverino/minecraft-stream-guard-site/actions/workflows/ci.yml)
   [![License: GPL-3.0-only](https://img.shields.io/badge/license-GPL--3.0--only-2f3437)](LICENSE)
 </div>
@@ -19,7 +19,7 @@ screen opens the Twitch or YouTube embed.
 
 ## Installation
 
-Install [Node.js](https://nodejs.org/) and npm, clone this repository, then run `npm ci` and `npm run build`. Serve the resulting `dist/` directory alongside the plugin so `/api/live` reaches its HTTP feed.
+Install [Node.js](https://nodejs.org/) 24 or 26 and pnpm 11, clone this repository, then run `pnpm install` and `pnpm build`. Serve the resulting `dist/` directory alongside the plugin so `/api/live` reaches its HTTP feed.
 
 ## Usage
 
@@ -37,7 +37,7 @@ Captured from the local development demo feed.
 
 ## Development
 
-See the [development guide](docs/development/README.md) for contributor setup and `npm run check`.
+See the [development guide](docs/development/README.md) for contributor setup and `pnpm validate`.
 
 ## Plugin Feed
 

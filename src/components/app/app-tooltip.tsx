@@ -1,4 +1,4 @@
-import type { ComponentProps, ReactNode } from "react";
+import type { ComponentProps, ReactElement } from "react";
 
 import {
   Tooltip,
@@ -10,20 +10,43 @@ import {
 type AppTooltipProviderProps = Readonly<ComponentProps<typeof TooltipProvider>>;
 
 type AppTooltipProps = Readonly<{
-  children: ReactNode;
+  /** The trigger element; it renders in place of Base UI's own trigger. */
+  children: ReactElement<Record<string, unknown>>;
   label: string;
   side?: ComponentProps<typeof TooltipContent>["side"];
 }>;
 
+/*
+ * Hover opens after 250 ms; keyboard focus opens at once. A tooltip opened
+ * within 300 ms of another closing skips the delay (Base UI defaults to 400).
+ * Triggers leave `delay` unset so this provider delay applies.
+ */
 function AppTooltipProvider(props: AppTooltipProviderProps) {
-  return <TooltipProvider delayDuration={250} {...props} />;
+  return <TooltipProvider delay={250} timeout={300} {...props} />;
 }
+
+/*
+ * Escape closes the tooltip and still reaches the page, so a single Escape on a
+ * focused control also dismisses the page layer it sits on (Base UI otherwise
+ * stops the event).
+ */
+const letEscapeReachPage: ComponentProps<typeof Tooltip>["onOpenChange"] = (
+  _open,
+  details,
+) => {
+  if (details.reason === "escape-key") {
+    details.allowPropagation();
+  }
+};
 
 function AppTooltip({ children, label, side = "bottom" }: AppTooltipProps) {
   return (
-    <Tooltip>
-      <TooltipTrigger asChild>{children}</TooltipTrigger>
-      <TooltipContent side={side}>{label}</TooltipContent>
+    <Tooltip onOpenChange={letEscapeReachPage}>
+      <TooltipTrigger render={children} />
+      {/* Keeps the 10 px trigger gap the wall had under Radix (base-nova uses 4). */}
+      <TooltipContent side={side} sideOffset={10}>
+        {label}
+      </TooltipContent>
     </Tooltip>
   );
 }

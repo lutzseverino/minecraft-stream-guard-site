@@ -6,7 +6,7 @@ import {
   ProviderGlyph,
   providerAccentClass,
   providerLabel,
-} from "@/components/app/provider-glyph";
+} from "@/components/custom/provider-glyph";
 import { cn } from "@/lib/utils";
 import {
   formatLiveDuration,

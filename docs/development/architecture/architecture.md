@@ -16,13 +16,17 @@ an inline Twitch or YouTube player when the feed provides enough embed data.
 
 - `src/api` owns the feed and embed contracts without importing React.
 - `src/pages/stream-wall` owns polling, layout, and page-level composition.
-- `src/components/app` owns reusable product components.
-- `src/components/ui` contains foundational shadcn primitives.
+- `src/components/app` wraps shadcn primitives for pages and owns shared
+  product invariants.
+- `src/components/ui` contains generated shadcn primitives, used only through
+  `src/components/app`.
+- `src/components/custom` holds custom components the registry has no match
+  for, such as the provider glyphs.
 - `src/theme` owns theme tokens and provider wiring.
 - Development may fall back to a local demo feed; production never substitutes
   demo streamers for an unavailable plugin response.
 
-Dependency-cruiser enforces these boundaries as part of `npm run check`.
+Dependency-cruiser enforces these boundaries as part of `pnpm validate`.
 
 ## Implications
 

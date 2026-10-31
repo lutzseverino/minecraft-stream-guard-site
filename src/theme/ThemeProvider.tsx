@@ -33,21 +33,15 @@ function getStoredTheme() {
   return isThemeMode(storedTheme) ? storedTheme : defaultTheme;
 }
 
+/* Keep in step with the boot script in index.html, which applies the saved
+   theme before first paint. Only `.dark` switches themes; light is `:root`. */
 function applyTheme(theme: ThemeMode) {
-  const root = window.document.documentElement;
+  const dark =
+    theme === "system"
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+      : theme === "dark";
 
-  root.classList.remove("light", "dark");
-
-  if (theme === "system") {
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-      .matches
-      ? "dark"
-      : "light";
-    root.classList.add(systemTheme);
-    return;
-  }
-
-  root.classList.add(theme);
+  window.document.documentElement.classList.toggle("dark", dark);
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
