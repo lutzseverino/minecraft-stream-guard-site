@@ -2,6 +2,8 @@
   <h1>StreamGuard Site</h1>
   <p>A fullscreen live stream wall for servers using the StreamGuard Minecraft plugin.</p>
 
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+  [![Node.js 24](https://img.shields.io/badge/Node.js-24-green)](https://nodejs.org/)
   [![CI](https://github.com/lutzseverino/minecraft-stream-guard-site/actions/workflows/ci.yml/badge.svg)](https://github.com/lutzseverino/minecraft-stream-guard-site/actions/workflows/ci.yml)
   [![License: GPL-3.0-only](https://img.shields.io/badge/license-GPL--3.0--only-2f3437)](LICENSE)
 </div>
@@ -15,6 +17,14 @@ The site reads the plugin's live feed and turns the current streamers into a
 fullscreen broadcast wall. Every live player becomes a screen; selecting a
 screen opens the Twitch or YouTube embed.
 
+## Installation
+
+Install [Node.js](https://nodejs.org/) and npm, clone this repository, then run `npm ci` and `npm run build`. Serve the resulting `dist/` directory alongside the plugin so `/api/live` reaches its HTTP feed.
+
+## Usage
+
+Open the deployed wall in a browser and select a streamer to open the embedded Twitch or YouTube player.
+
 ## Screenshots
 
 Captured from the local development demo feed.
@@ -27,21 +37,7 @@ Captured from the local development demo feed.
 
 ## Development
 
-Install Node.js 24 and npm 11.6.2, then:
-
-```bash
-npm ci
-npm run dev
-```
-
-Run the canonical local gate before opening a pull request:
-
-```bash
-npm run check
-```
-
-The gate runs Biome, typed ESLint, TypeScript, Vitest,
-dependency-cruiser, and a production build.
+See the [development guide](docs/development/README.md) for contributor setup and `npm run check`.
 
 ## Plugin Feed
 
@@ -54,9 +50,12 @@ Production builds expect the real plugin feed.
 
 ## Documentation
 
-Start with the [documentation index](docs/README.md). Documentation is organized
-by reader intent so durable guidance has one predictable home.
+[Documentation](docs/README.md)
+
+## Contributing
+
+[Contributing](CONTRIBUTING.md)
 
 ## License
 
-StreamGuard Site is available under the [GNU General Public License v3.0](LICENSE).
+[GNU General Public License v3.0 only](LICENSE)
