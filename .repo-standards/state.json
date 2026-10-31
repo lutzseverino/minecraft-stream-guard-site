@@ -15,8 +15,8 @@
         "id": "canonical-labels"
       },
       "operationIndex": 0,
-      "before": "sha256:123544713ae9d37795ebb20f6f852bc7792f9b148a2245e0ee7ae9a8b567ab94",
-      "after": "sha256:123544713ae9d37795ebb20f6f852bc7792f9b148a2245e0ee7ae9a8b567ab94",
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -35,8 +35,8 @@
         "id": "pull-request-integration"
       },
       "operationIndex": 1,
-      "before": "sha256:123544713ae9d37795ebb20f6f852bc7792f9b148a2245e0ee7ae9a8b567ab94",
-      "after": "sha256:123544713ae9d37795ebb20f6f852bc7792f9b148a2245e0ee7ae9a8b567ab94",
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -47,13 +47,6 @@
         "documentation": {
           "paths": [
             "docs/README.md",
-            "docs/_templates/README.md",
-            "docs/_templates/decision.template.md",
-            "docs/_templates/explanation.template.md",
-            "docs/_templates/how-to.template.md",
-            "docs/_templates/index.template.md",
-            "docs/_templates/reference.template.md",
-            "docs/_templates/tutorial.template.md",
             "docs/development/README.md",
             "docs/development/architecture/README.md",
             "docs/development/architecture/architecture.md",
@@ -64,12 +57,6 @@
             "docs/development/templates/index.template.md",
             "docs/development/templates/reference.template.md",
             "docs/development/templates/tutorial.template.md",
-            "docs/explanation/README.md",
-            "docs/explanation/architecture.md",
-            "docs/how-to/README.md",
-            "docs/how-to/run-locally.md",
-            "docs/reference/README.md",
-            "docs/reference/live-feed.md",
             "docs/usage/README.md",
             "docs/usage/guides/README.md",
             "docs/usage/guides/run-locally.md",
@@ -119,422 +106,16 @@
           "directories": []
         },
         "typescript-vite-stack": {
-          "paths": [],
+          "paths": [
+            "package.json"
+          ],
           "directories": []
         }
       },
-      "before": "sha256:123544713ae9d37795ebb20f6f852bc7792f9b148a2245e0ee7ae9a8b567ab94",
-      "after": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
-      "changes": {
-        ".gitattributes": {
-          "before": {
-            "type": "file",
-            "sha256": "daae3fa3ee164a3d6fa9ffe73d85be6952949c374153182c3330e29c05b2defa",
-            "executable": false
-          },
-          "after": {
-            "type": "file",
-            "sha256": "dab10623720d9052622e2350338fd07618b09cf1dca64e56b25e0d48ce4b1312",
-            "executable": false
-          }
-        },
-        "README.md": {
-          "before": {
-            "type": "file",
-            "sha256": "e7db3095e8793d1af05a2c238d477ff725465ca1ee142aeb84e6f8bbfff5c066",
-            "executable": false
-          },
-          "after": {
-            "type": "file",
-            "sha256": "5ee9ac1da7f0b0db84ac1a5ff351574d1debb7c35b9bb16240e50c14e340cc88",
-            "executable": false
-          }
-        },
-        "docs/README.md": {
-          "before": {
-            "type": "file",
-            "sha256": "4256728551ab1aefbf1c2ff72a1cd8b612bbfa06bdaf4afa3fc7a7ae3b631ba0",
-            "executable": false
-          },
-          "after": {
-            "type": "file",
-            "sha256": "fd9043d9da82ef11ef34807d39ce2f497f4274b08eccd83c5b9b7a82124a0317",
-            "executable": false
-          }
-        },
-        "docs/_templates/README.md": {
-          "before": {
-            "type": "file",
-            "sha256": "60edcc7bb6b3768ac09429b91b4f615b8192472c62fc8abd170f6b0343dfce66",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/_templates/decision.template.md": {
-          "before": {
-            "type": "file",
-            "sha256": "7eec18ee96ac660ff2ace9e25d889cc03a008517edddefcb05e15ad5e69c104d",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/_templates/explanation.template.md": {
-          "before": {
-            "type": "file",
-            "sha256": "a728209a8673ddd6e38cb08177aceb7e7a940ab86cbdb22b7c9c0ed2061bc921",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/_templates/how-to.template.md": {
-          "before": {
-            "type": "file",
-            "sha256": "6f25f76a9feaee4f54f195ca8c5574a8f51bdf46ef06911ada14fb03aeed14ee",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/_templates/index.template.md": {
-          "before": {
-            "type": "file",
-            "sha256": "9bbe7c193104a2c73d93d0c3389745f73e571bc4aa5ee34dd44a9772a2732d7f",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/_templates/reference.template.md": {
-          "before": {
-            "type": "file",
-            "sha256": "4e88f2ff02c0ff8191a8039381aac0dd5d73b9f0e0e1dc2e573080e4e41f4d41",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/_templates/tutorial.template.md": {
-          "before": {
-            "type": "file",
-            "sha256": "248aaeb4ed190a3b6254831a7978942d4ed4dc4ad3e239a19810d263a662103a",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/development/README.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "35e1d39061c0d1d98ce3fdf8cc1cc0f33ffd678b5d76d2d7747432db711e6ff9",
-            "executable": false
-          }
-        },
-        "docs/development/architecture/README.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "3ed8222b86e5674dcbc49f6190470e9e10fe7ff34fae039b0b2b99f439976950",
-            "executable": false
-          }
-        },
-        "docs/development/architecture/architecture.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "3d54873af7535bef68528f6d4aea30bf3b88db7914f5977e5cb93db102e1bf0d",
-            "executable": false
-          }
-        },
-        "docs/development/templates/README.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "a80ed31c14f3f8d90d272c009752ab3d6fa3816e8932982d60140043d0d85274",
-            "executable": false
-          }
-        },
-        "docs/development/templates/decision.template.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "7eec18ee96ac660ff2ace9e25d889cc03a008517edddefcb05e15ad5e69c104d",
-            "executable": false
-          }
-        },
-        "docs/development/templates/explanation.template.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "a728209a8673ddd6e38cb08177aceb7e7a940ab86cbdb22b7c9c0ed2061bc921",
-            "executable": false
-          }
-        },
-        "docs/development/templates/how-to.template.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "6f25f76a9feaee4f54f195ca8c5574a8f51bdf46ef06911ada14fb03aeed14ee",
-            "executable": false
-          }
-        },
-        "docs/development/templates/index.template.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "9bbe7c193104a2c73d93d0c3389745f73e571bc4aa5ee34dd44a9772a2732d7f",
-            "executable": false
-          }
-        },
-        "docs/development/templates/reference.template.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "4e88f2ff02c0ff8191a8039381aac0dd5d73b9f0e0e1dc2e573080e4e41f4d41",
-            "executable": false
-          }
-        },
-        "docs/development/templates/tutorial.template.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "248aaeb4ed190a3b6254831a7978942d4ed4dc4ad3e239a19810d263a662103a",
-            "executable": false
-          }
-        },
-        "docs/explanation/README.md": {
-          "before": {
-            "type": "file",
-            "sha256": "c4f165d1de752161fb95971b1ad6219dc446ad4f31f73e18c9e159efb71b7650",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/explanation/architecture.md": {
-          "before": {
-            "type": "file",
-            "sha256": "3d54873af7535bef68528f6d4aea30bf3b88db7914f5977e5cb93db102e1bf0d",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/how-to/README.md": {
-          "before": {
-            "type": "file",
-            "sha256": "e6e4da5c4295d17c23c9a85c1761fb176c1f8b049ae9cfdf770743abbd0dcd1e",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/how-to/run-locally.md": {
-          "before": {
-            "type": "file",
-            "sha256": "8f915389c6633fb81e7c4b7e02972a4e3c9b2fba49a431c155f4e6944f2bf9b0",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/reference/README.md": {
-          "before": {
-            "type": "file",
-            "sha256": "cc6cb21c6069150b526fcfa8914e67bf17216da520f2347662101f2a8a08ef6a",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/reference/live-feed.md": {
-          "before": {
-            "type": "file",
-            "sha256": "8e93d6e48ce92c50f0ea1c186adb2296026db913942fbc77044a0fda15a42b06",
-            "executable": false
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/usage/README.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "2655f7b7d1b2b6ab63e820058f2e62e97dadf337fe68bcc92147fc9eb23cbdf2",
-            "executable": false
-          }
-        },
-        "docs/usage/guides/README.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "fd5f3905a3da73e2e0a03473e9356374fcba6eaeaa4ec50e07b425943bbb2680",
-            "executable": false
-          }
-        },
-        "docs/usage/guides/run-locally.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "8f915389c6633fb81e7c4b7e02972a4e3c9b2fba49a431c155f4e6944f2bf9b0",
-            "executable": false
-          }
-        },
-        "docs/usage/reference/README.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "885a1484617792c7b695cfd61773fe1df44709039ad1669a8b7532d13ccd1972",
-            "executable": false
-          }
-        },
-        "docs/usage/reference/live-feed.md": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "file",
-            "sha256": "8e93d6e48ce92c50f0ea1c186adb2296026db913942fbc77044a0fda15a42b06",
-            "executable": false
-          }
-        }
-      },
-      "boundaryChanges": {
-        "docs/_templates": {
-          "before": {
-            "type": "directory",
-            "mode": 448
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/development": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "directory",
-            "mode": 448
-          }
-        },
-        "docs/development/architecture": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "directory",
-            "mode": 448
-          }
-        },
-        "docs/development/templates": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "directory",
-            "mode": 448
-          }
-        },
-        "docs/explanation": {
-          "before": {
-            "type": "directory",
-            "mode": 448
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/how-to": {
-          "before": {
-            "type": "directory",
-            "mode": 448
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/reference": {
-          "before": {
-            "type": "directory",
-            "mode": 448
-          },
-          "after": {
-            "type": "missing"
-          }
-        },
-        "docs/usage": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "directory",
-            "mode": 448
-          }
-        },
-        "docs/usage/guides": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "directory",
-            "mode": 448
-          }
-        },
-        "docs/usage/reference": {
-          "before": {
-            "type": "missing"
-          },
-          "after": {
-            "type": "directory",
-            "mode": 448
-          }
-        }
-      },
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "changes": {},
+      "boundaryChanges": {},
       "violations": []
     },
     {
@@ -543,13 +124,6 @@
         "documentation": {
           "paths": [
             "docs/README.md",
-            "docs/_templates/README.md",
-            "docs/_templates/decision.template.md",
-            "docs/_templates/explanation.template.md",
-            "docs/_templates/how-to.template.md",
-            "docs/_templates/index.template.md",
-            "docs/_templates/reference.template.md",
-            "docs/_templates/tutorial.template.md",
             "docs/development/README.md",
             "docs/development/architecture/README.md",
             "docs/development/architecture/architecture.md",
@@ -560,12 +134,6 @@
             "docs/development/templates/index.template.md",
             "docs/development/templates/reference.template.md",
             "docs/development/templates/tutorial.template.md",
-            "docs/explanation/README.md",
-            "docs/explanation/architecture.md",
-            "docs/how-to/README.md",
-            "docs/how-to/run-locally.md",
-            "docs/reference/README.md",
-            "docs/reference/live-feed.md",
             "docs/usage/README.md",
             "docs/usage/guides/README.md",
             "docs/usage/guides/run-locally.md",
@@ -615,12 +183,14 @@
           "directories": []
         },
         "typescript-vite-stack": {
-          "paths": [],
+          "paths": [
+            "package.json"
+          ],
           "directories": []
         }
       },
-      "before": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
-      "after": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -631,13 +201,6 @@
         "documentation": {
           "paths": [
             "docs/README.md",
-            "docs/_templates/README.md",
-            "docs/_templates/decision.template.md",
-            "docs/_templates/explanation.template.md",
-            "docs/_templates/how-to.template.md",
-            "docs/_templates/index.template.md",
-            "docs/_templates/reference.template.md",
-            "docs/_templates/tutorial.template.md",
             "docs/development/README.md",
             "docs/development/architecture/README.md",
             "docs/development/architecture/architecture.md",
@@ -648,12 +211,6 @@
             "docs/development/templates/index.template.md",
             "docs/development/templates/reference.template.md",
             "docs/development/templates/tutorial.template.md",
-            "docs/explanation/README.md",
-            "docs/explanation/architecture.md",
-            "docs/how-to/README.md",
-            "docs/how-to/run-locally.md",
-            "docs/reference/README.md",
-            "docs/reference/live-feed.md",
             "docs/usage/README.md",
             "docs/usage/guides/README.md",
             "docs/usage/guides/run-locally.md",
@@ -669,8 +226,8 @@
         "id": "documentation-navigation"
       },
       "operationIndex": 2,
-      "before": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
-      "after": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -689,8 +246,8 @@
         "id": "pull-request-reviewer"
       },
       "operationIndex": 3,
-      "before": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
-      "after": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -709,8 +266,8 @@
         "id": "factory-review-policy"
       },
       "operationIndex": 4,
-      "before": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
-      "after": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -729,8 +286,8 @@
         "id": "project-readme-structure"
       },
       "operationIndex": 5,
-      "before": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
-      "after": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -751,8 +308,30 @@
         "id": "repository-readme-structure"
       },
       "operationIndex": 6,
-      "before": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
-      "after": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "changes": {},
+      "boundaryChanges": {},
+      "violations": []
+    },
+    {
+      "phase": "checks",
+      "scope": {
+        "typescript-vite-stack": {
+          "paths": [
+            "package.json"
+          ],
+          "directories": []
+        }
+      },
+      "operation": {
+        "phase": "checks",
+        "declaration": "typescript-vite-stack",
+        "id": "typescript-vite-stack-manifests"
+      },
+      "operationIndex": 7,
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -763,13 +342,6 @@
         "documentation": {
           "paths": [
             "docs/README.md",
-            "docs/_templates/README.md",
-            "docs/_templates/decision.template.md",
-            "docs/_templates/explanation.template.md",
-            "docs/_templates/how-to.template.md",
-            "docs/_templates/index.template.md",
-            "docs/_templates/reference.template.md",
-            "docs/_templates/tutorial.template.md",
             "docs/development/README.md",
             "docs/development/architecture/README.md",
             "docs/development/architecture/architecture.md",
@@ -780,12 +352,6 @@
             "docs/development/templates/index.template.md",
             "docs/development/templates/reference.template.md",
             "docs/development/templates/tutorial.template.md",
-            "docs/explanation/README.md",
-            "docs/explanation/architecture.md",
-            "docs/how-to/README.md",
-            "docs/how-to/run-locally.md",
-            "docs/reference/README.md",
-            "docs/reference/live-feed.md",
             "docs/usage/README.md",
             "docs/usage/guides/README.md",
             "docs/usage/guides/run-locally.md",
@@ -835,12 +401,14 @@
           "directories": []
         },
         "typescript-vite-stack": {
-          "paths": [],
+          "paths": [
+            "package.json"
+          ],
           "directories": []
         }
       },
-      "before": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
-      "after": "sha256:41e720fbd606a2a3707ef0bd2bc501348d25f1b1d463863a8cba19b3ce088cfc",
+      "before": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
+      "after": "sha256:738c1bef83066210ddb1369340c42521c839349ec0f88e4612098a5ea163a401",
       "changes": {},
       "boundaryChanges": {},
       "violations": []
@@ -883,7 +451,7 @@
       "result": {
         "format": "repo-standards/result/v2",
         "status": "unchanged",
-        "message": "GitHub PR integration for lutzseverino/minecraft-stream-guard-site applies squash-only integration, PR-title subjects, and PR-body messages. Requiring `PR metadata` is deferred because the default branch `main` does not carry the PR metadata validation workflow yet, so GitHub cannot report the check. Merge this adoption through the owner; the next adoption or update then requires the check. Strict freshness is unconfirmed; unattended merging stops until GitHub enforcement is confirmed."
+        "message": "GitHub PR integration already matches the canonical configuration for lutzseverino/minecraft-stream-guard-site."
       },
       "error": null,
       "stdout": ".repo-standards/local/operations/1.stdout",
@@ -993,898 +561,36 @@
       "error": null,
       "stdout": ".repo-standards/local/operations/6.stdout",
       "stderr": ".repo-standards/local/operations/6.stderr"
+    },
+    {
+      "operation": {
+        "declaration": "typescript-vite-stack",
+        "phase": "checks",
+        "id": "typescript-vite-stack-manifests"
+      },
+      "process": {
+        "exitCode": 0,
+        "signal": null,
+        "error": null,
+        "timedOut": false
+      },
+      "result": {
+        "format": "repo-standards/result/v2",
+        "status": "passed",
+        "message": "The typescript-vite stack manifest facts are valid for 1 Project; framework, React, Tailwind, TypeScript and test-runner majors, actual astro check/ui:check execution by validate, CI coverage, Setup and validation, integrity, wrappers and theme behavior still require contextual assessment."
+      },
+      "error": null,
+      "stdout": ".repo-standards/local/operations/7.stdout",
+      "stderr": ".repo-standards/local/operations/7.stderr"
     }
   ],
   "retryHistory": [],
-  "changeSet": [
-    {
-      "path": ".agents/skills/LICENSE.humanlayer-skills",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/LICENSE.mattpocock-skills",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/babysit/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/babysit/merge.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/babysit/platform.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/babysit/pull-request-reviewer.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/babysit/request.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/babysit/review-policy.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/babysit/reviewer.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/babysit/trusted-review-config.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/babysit/wait.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/code-review/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/code-review/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/codebase-design/DEEPENING.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/codebase-design/DESIGN-IT-TWICE.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/codebase-design/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/codebase-design/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/diagnosing-bugs/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/diagnosing-bugs/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/diagnosing-bugs/scripts/hitl-loop.template.sh",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/domain-modeling/ADR-FORMAT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/domain-modeling/GLOSSARY-FORMAT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/domain-modeling/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/domain-modeling/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/grill-with-docs/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/grill-with-docs/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/grilling/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/grilling/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/implement/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/implement/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/improve-codebase-architecture/HTML-REPORT.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/improve-codebase-architecture/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/improve-codebase-architecture/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/orchestrate/CREDITS.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/orchestrate/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/orchestrate/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/orchestrate/wait.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/pr/CREDITS.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/pr/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/pr/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/prototype/LOGIC.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/prototype/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/prototype/UI.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/prototype/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/repository-standards/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/repository-standards/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/research/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/research/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/tdd/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/tdd/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/tdd/mocking.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/tdd/tests.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/to-spec/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/to-spec/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/to-tickets/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/to-tickets/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/AGENT-BRIEF.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/CREDITS.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/OUT-OF-SCOPE.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/triage/ready.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/wayfinder/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/wayfinder/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/writing-for-agents/SKILL-MECHANICS.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/writing-for-agents/SKILL.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".agents/skills/writing-for-agents/agents/openai.yaml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/babysit",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/code-review",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/codebase-design",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/diagnosing-bugs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/domain-modeling",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/grill-with-docs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/grilling",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/implement",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/improve-codebase-architecture",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/orchestrate",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/pr",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/prototype",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/repository-standards",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/research",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/tdd",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/to-spec",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/to-tickets",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/triage",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/wayfinder",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".claude/skills/writing-for-agents",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".gitattributes",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": ".github/ISSUE_TEMPLATE/bug-report.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/ISSUE_TEMPLATE/feature-request.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/ISSUE_TEMPLATE/implementation-ticket.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/ISSUE_TEMPLATE/specification.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/scripts/validate-pr-metadata.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/scripts/validate.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/workflows/issue-contracts.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/workflows/pr-metadata.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": ".github/workflows/standards-update.yml",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "AGENTS.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "CONTRIBUTING.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/_templates/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/_templates/decision.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/_templates/explanation.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/_templates/how-to.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/_templates/index.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/_templates/reference.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/_templates/tutorial.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/agents/README.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "docs/agents/domain.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "docs/agents/issue-tracker.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "docs/agents/triage-labels.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "docs/development/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/development/architecture/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/development/architecture/architecture.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/development/templates/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/development/templates/decision.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/development/templates/explanation.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/development/templates/how-to.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/development/templates/index.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/development/templates/reference.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/development/templates/tutorial.template.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/explanation/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/explanation/architecture.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/how-to/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/how-to/run-locally.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/reference/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/reference/live-feed.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/usage/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/usage/guides/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/usage/guides/run-locally.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/usage/reference/README.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "docs/usage/reference/live-feed.md",
-      "phases": [
-        "agent"
-      ]
-    },
-    {
-      "path": "operations/lib/rendered-markdown.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "scripts/validate-issue-contract.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "scripts/validate.mjs",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/marked/LICENSE",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/marked/README.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/marked/marked.esm.js",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/parse5/LICENSE.entities",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/parse5/LICENSE.parse5",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/parse5/README.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/parse5/parse5.esm.js",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/postern/LICENSE",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/postern/README.md",
-      "phases": [
-        "installation"
-      ]
-    },
-    {
-      "path": "vendor/postern/postern.mjs",
-      "phases": [
-        "installation"
-      ]
-    }
-  ],
+  "changeSet": [],
   "lastComplete": {
-    "run": "1b61a6a5-f5db-4c38-96ce-4df54dc4af9d",
-    "inspection": "sha256:dd6be8c7409b09cedbd2fbfa74f1c1096edf751bdf32b5108066ef3a99451b2f",
-    "completedAt": "2026-10-31T09:09:58.502Z",
-    "head": "9c348b352625e8701e6d3410caae0b707840bc7d"
+    "run": "3655f1c4-8485-47a3-9cbb-f076051a9b72",
+    "inspection": "sha256:fa714da41d174dcb4c6a3f15493f683d7af0fde82720765170b3fb4a0d486697",
+    "completedAt": "2026-10-31T19:07:05.765Z",
+    "head": "ae16c069499c2147cd71f118ce29d7dd2b85243b"
   },
   "baselines": {
     "docs/agents/README.md": {
@@ -2506,83 +1212,70 @@
       "error": null,
       "stdout": ".repo-standards/local/operations/6.stdout",
       "stderr": ".repo-standards/local/operations/6.stderr"
+    },
+    {
+      "operation": {
+        "declaration": "typescript-vite-stack",
+        "phase": "checks",
+        "id": "typescript-vite-stack-manifests"
+      },
+      "process": {
+        "exitCode": 0,
+        "signal": null,
+        "error": null,
+        "timedOut": false
+      },
+      "result": {
+        "format": "repo-standards/result/v2",
+        "status": "passed",
+        "message": "The typescript-vite stack manifest facts are valid for 1 Project; framework, React, Tailwind, TypeScript and test-runner majors, actual astro check/ui:check execution by validate, CI coverage, Setup and validation, integrity, wrappers and theme behavior still require contextual assessment."
+      },
+      "error": null,
+      "stdout": ".repo-standards/local/operations/7.stdout",
+      "stderr": ".repo-standards/local/operations/7.stderr"
     }
   ],
   "assessments": [
     {
       "format": "repo-standards/assessment/v3",
       "scope": {
-        "inspection": "sha256:dd6be8c7409b09cedbd2fbfa74f1c1096edf751bdf32b5108066ef3a99451b2f",
-        "afterFixes": "sha256:a3cff9531cb2e0bac991216225a2e70a504f8b2a3294d81df077fa034baae6f3"
+        "inspection": "sha256:fa714da41d174dcb4c6a3f15493f683d7af0fde82720765170b3fb4a0d486697",
+        "afterFixes": "sha256:421555cd1930eff8529ae7d92665fc779092f057ddb10568f30bacb77d97b2a8"
       },
-      "run": "1b61a6a5-f5db-4c38-96ce-4df54dc4af9d",
+      "run": "3655f1c4-8485-47a3-9cbb-f076051a9b72",
       "selection": "sha256:6d92a1e677c5c62108c072720dd0749c5340d261c2283152c09fda549957d9c3",
-      "snapshot": "sha256:6f2c6f74ff6ee6f69f16a3d7c949d79134afcc04507a5c1229c70573b2293a54",
+      "snapshot": "sha256:421555cd1930eff8529ae7d92665fc779092f057ddb10568f30bacb77d97b2a8",
       "declarations": [
         {
           "id": "documentation",
           "status": "satisfied",
-          "explanation": "Documentation is organized by usage/development/agents with local indexes, preserved topic content and a real Setup and validation guide. No ADRs existed. Skill resources remain outside documentation.",
-          "changedPaths": [
-            "docs/README.md",
-            "docs/_templates/README.md",
-            "docs/_templates/decision.template.md",
-            "docs/_templates/explanation.template.md",
-            "docs/_templates/how-to.template.md",
-            "docs/_templates/index.template.md",
-            "docs/_templates/reference.template.md",
-            "docs/_templates/tutorial.template.md",
-            "docs/development/README.md",
-            "docs/development/architecture/README.md",
-            "docs/development/architecture/architecture.md",
-            "docs/development/templates/README.md",
-            "docs/development/templates/decision.template.md",
-            "docs/development/templates/explanation.template.md",
-            "docs/development/templates/how-to.template.md",
-            "docs/development/templates/index.template.md",
-            "docs/development/templates/reference.template.md",
-            "docs/development/templates/tutorial.template.md",
-            "docs/explanation/README.md",
-            "docs/explanation/architecture.md",
-            "docs/how-to/README.md",
-            "docs/how-to/run-locally.md",
-            "docs/reference/README.md",
-            "docs/reference/live-feed.md",
-            "docs/usage/README.md",
-            "docs/usage/guides/README.md",
-            "docs/usage/guides/run-locally.md",
-            "docs/usage/reference/README.md",
-            "docs/usage/reference/live-feed.md"
-          ],
+          "explanation": "Documentation stays organized under usage, development and agents with one index per directory (pnpm check:docs: 21 files valid). The development guide's Setup and validation section now states pnpm 11 and Node.js 24/26, every validate step with its tool, and the accurate required checks (Validate site, validate, PR metadata); the obsolete 'tracked separately in #9' note is gone. The run-locally guide and the architecture document describe the pnpm commands and the components/app, components/ui and components/custom boundaries; no Biome, ESLint, npm or Radix reference remains. Skill Markdown under .agents stays skill material.",
+          "changedPaths": [],
           "evidence": [
             "docs/README.md",
             "docs/usage/README.md",
+            "docs/usage/guides/run-locally.md",
             "docs/development/README.md",
-            "docs/development/architecture/architecture.md",
-            "docs/usage/reference/live-feed.md"
+            "docs/development/architecture/architecture.md"
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "Documentation is organized by usage/development/agents with local indexes, preserved topic content and a real Setup and validation guide. No ADRs existed. Skill resources remain outside documentation.",
+              "explanation": "Every file under docs is covered or owned by another declaration (docs/agents); the moved old paths no longer exist and no new documentation file appeared outside the scope.",
               "evidence": [
                 "docs/README.md",
-                "docs/usage/README.md",
                 "docs/development/README.md",
-                "docs/development/architecture/architecture.md",
-                "docs/usage/reference/live-feed.md"
+                "docs/usage/README.md"
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "Documentation is organized by usage/development/agents with local indexes, preserved topic content and a real Setup and validation guide. No ADRs existed. Skill resources remain outside documentation.",
+              "explanation": "Every file under docs is covered or owned by another declaration (docs/agents); the moved old paths no longer exist and no new documentation file appeared outside the scope.",
               "evidence": [
                 "docs/README.md",
-                "docs/usage/README.md",
                 "docs/development/README.md",
-                "docs/development/architecture/architecture.md",
-                "docs/usage/reference/live-feed.md"
+                "docs/usage/README.md"
               ],
               "additionalPaths": []
             }
@@ -2592,9 +1285,7 @@
           "id": "git-attributes",
           "status": "satisfied",
           "explanation": "Reviewed exact installed code inventory: the validator scripts, rendered Markdown runtime and code in babysit, orchestrate, triage and diagnosing-bugs. Narrow attributes cover them; git check-attr reports set for installed code and unspecified for src/App.tsx, scripts/check-docs.mjs and the existing frontend-design skill. Existing attribute lines preserved.",
-          "changedPaths": [
-            ".gitattributes"
-          ],
+          "changedPaths": [],
           "evidence": [
             ".gitattributes",
             "scripts/validate.mjs",
@@ -2604,27 +1295,30 @@
         {
           "id": "github-repository-configuration",
           "status": "satisfied",
-          "explanation": "Public repository lutzseverino/minecraft-stream-guard-site; repository REPO_CANON_RUNS_ON absent/unset. Personal-account repository has no organization-level variable. Remote setup authorized. Strict ruleset 19059734 is active with current_user_can_bypass never and strict required checks. No reviewer or app-author policy declaration exists. PR metadata enforcement waits for its workflow to land; existing required checks remain. No content scope or factory profile.",
+          "explanation": "Public personal-account repository lutzseverino/minecraft-stream-guard-site; REPO_CANON_RUNS_ON is unset, so installed jobs use ubuntu-latest. Effective main rules: active strict ruleset 19059734 requires Validate site and validate, and active strict ruleset 26265811 requires PR metadata; both report current_user_can_bypass never. Squash-only merging is retained. No reviewer file or app-author policy declaration exists. Standard profile, no factory labels. This update makes no remote change beyond what adopt's setup verifies.",
           "changedPaths": [],
           "evidence": [
             ".github/workflows/pr-metadata.yml",
+            ".github/workflows/ci.yml",
             ".repo-standards/rules/github-repository-configuration.md"
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "Public repository lutzseverino/minecraft-stream-guard-site; repository REPO_CANON_RUNS_ON absent/unset. Personal-account repository has no organization-level variable. Remote setup authorized. Strict ruleset 19059734 is active with current_user_can_bypass never and strict required checks. No reviewer or app-author policy declaration exists. PR metadata enforcement waits for its workflow to land; existing required checks remain. No content scope or factory profile.",
+              "explanation": "Public personal-account repository lutzseverino/minecraft-stream-guard-site; REPO_CANON_RUNS_ON is unset, so installed jobs use ubuntu-latest. Effective main rules: active strict ruleset 19059734 requires Validate site and validate, and active strict ruleset 26265811 requires PR metadata; both report current_user_can_bypass never. Squash-only merging is retained. No reviewer file or app-author policy declaration exists. Standard profile, no factory labels. This update makes no remote change beyond what adopt's setup verifies.",
               "evidence": [
                 ".github/workflows/pr-metadata.yml",
+                ".github/workflows/ci.yml",
                 ".repo-standards/rules/github-repository-configuration.md"
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "Public repository lutzseverino/minecraft-stream-guard-site; repository REPO_CANON_RUNS_ON absent/unset. Personal-account repository has no organization-level variable. Remote setup authorized. Strict ruleset 19059734 is active with current_user_can_bypass never and strict required checks. No reviewer or app-author policy declaration exists. PR metadata enforcement waits for its workflow to land; existing required checks remain. No content scope or factory profile.",
+              "explanation": "Public personal-account repository lutzseverino/minecraft-stream-guard-site; REPO_CANON_RUNS_ON is unset, so installed jobs use ubuntu-latest. Effective main rules: active strict ruleset 19059734 requires Validate site and validate, and active strict ruleset 26265811 requires PR metadata; both report current_user_can_bypass never. Squash-only merging is retained. No reviewer file or app-author policy declaration exists. Standard profile, no factory labels. This update makes no remote change beyond what adopt's setup verifies.",
               "evidence": [
                 ".github/workflows/pr-metadata.yml",
+                ".github/workflows/ci.yml",
                 ".repo-standards/rules/github-repository-configuration.md"
               ],
               "additionalPaths": []
@@ -2691,46 +1385,43 @@
         {
           "id": "repository-readme",
           "status": "satisfied",
-          "explanation": "Centered title, newcomer description and language/runtime badges precede the content. Installation, representative usage and correct pointer-only documentation/contribution/license sections preserve the live feed and screenshot facts.",
-          "changedPaths": [
-            "README.md"
-          ],
+          "explanation": "The centered header keeps the title, the one-sentence description and the TypeScript 7 and Node.js 24 | 26 badges, which now match package.json. Installation gives the shortest pnpm path without version numbers in commands, Usage gives one example, the Development section points contributors to the guide and pnpm validate, and the Documentation, Contributing and License sections are link-only pointers.",
+          "changedPaths": [],
           "evidence": [
             "README.md",
-            "docs/development/README.md"
+            "package.json",
+            "docs/development/README.md",
+            "LICENSE"
           ]
         },
         {
           "id": "typescript-astro-stack",
           "status": "satisfied",
-          "explanation": "No scope is valid: existing root App is deliberately excluded until separate #9 migration. npm/package-lock, Node >=24, TypeScript 5, Biome/ESLint, Vitest 4, check rather than validate, no oxlint/Prettier or required ui:* scripts, ranged shadcn dependency. This is not a Node Project or Astro Site. Source and manifests unchanged.",
+          "explanation": "The root package.json is a client-rendered Vite 8 / React 19 App: the stream wall's selection, focused playback and keyboard handling are browser state (src/App.tsx, src/pages/stream-wall/stream-wall-page.tsx); owner classification on lutzseverino/repo-canon#560. It is not an Astro Site (no Astro dependency or configuration), and it now belongs to typescript-vite-stack; no other package.json exists, so no scope is valid.",
           "changedPaths": [],
           "evidence": [
             "package.json",
-            "src/App.tsx",
             "vite.config.ts",
-            "components.json"
+            "src/App.tsx"
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "No scope is valid: existing root App is deliberately excluded until separate #9 migration. npm/package-lock, Node >=24, TypeScript 5, Biome/ESLint, Vitest 4, check rather than validate, no oxlint/Prettier or required ui:* scripts, ranged shadcn dependency. This is not a Node Project or Astro Site. Source and manifests unchanged.",
+              "explanation": "The root package.json is a client-rendered Vite 8 / React 19 App: the stream wall's selection, focused playback and keyboard handling are browser state (src/App.tsx, src/pages/stream-wall/stream-wall-page.tsx); owner classification on lutzseverino/repo-canon#560. It is not an Astro Site (no Astro dependency or configuration), and it now belongs to typescript-vite-stack; no other package.json exists, so no scope is valid.",
               "evidence": [
                 "package.json",
-                "src/App.tsx",
                 "vite.config.ts",
-                "components.json"
+                "src/App.tsx"
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "No scope is valid: existing root App is deliberately excluded until separate #9 migration. npm/package-lock, Node >=24, TypeScript 5, Biome/ESLint, Vitest 4, check rather than validate, no oxlint/Prettier or required ui:* scripts, ranged shadcn dependency. This is not a Node Project or Astro Site. Source and manifests unchanged.",
+              "explanation": "The root package.json is a client-rendered Vite 8 / React 19 App: the stream wall's selection, focused playback and keyboard handling are browser state (src/App.tsx, src/pages/stream-wall/stream-wall-page.tsx); owner classification on lutzseverino/repo-canon#560. It is not an Astro Site (no Astro dependency or configuration), and it now belongs to typescript-vite-stack; no other package.json exists, so no scope is valid.",
               "evidence": [
                 "package.json",
-                "src/App.tsx",
                 "vite.config.ts",
-                "components.json"
+                "src/App.tsx"
               ],
               "additionalPaths": []
             }
@@ -2739,34 +1430,31 @@
         {
           "id": "typescript-node-stack",
           "status": "satisfied",
-          "explanation": "No scope is valid: existing root App is deliberately excluded until separate #9 migration. npm/package-lock, Node >=24, TypeScript 5, Biome/ESLint, Vitest 4, check rather than validate, no oxlint/Prettier or required ui:* scripts, ranged shadcn dependency. This is not a Node Project or Astro Site. Source and manifests unchanged.",
+          "explanation": "The root package.json is a client-rendered Vite 8 / React 19 App: the stream wall's selection, focused playback and keyboard handling are browser state (src/App.tsx, src/pages/stream-wall/stream-wall-page.tsx); owner classification on lutzseverino/repo-canon#560. It is not a Node Project, and it now belongs to typescript-vite-stack; no other package.json exists, so no scope is valid.",
           "changedPaths": [],
           "evidence": [
             "package.json",
-            "src/App.tsx",
             "vite.config.ts",
-            "components.json"
+            "src/App.tsx"
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "No scope is valid: existing root App is deliberately excluded until separate #9 migration. npm/package-lock, Node >=24, TypeScript 5, Biome/ESLint, Vitest 4, check rather than validate, no oxlint/Prettier or required ui:* scripts, ranged shadcn dependency. This is not a Node Project or Astro Site. Source and manifests unchanged.",
+              "explanation": "The root package.json is a client-rendered Vite 8 / React 19 App: the stream wall's selection, focused playback and keyboard handling are browser state (src/App.tsx, src/pages/stream-wall/stream-wall-page.tsx); owner classification on lutzseverino/repo-canon#560. It is not a Node Project, and it now belongs to typescript-vite-stack; no other package.json exists, so no scope is valid.",
               "evidence": [
                 "package.json",
-                "src/App.tsx",
                 "vite.config.ts",
-                "components.json"
+                "src/App.tsx"
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "No scope is valid: existing root App is deliberately excluded until separate #9 migration. npm/package-lock, Node >=24, TypeScript 5, Biome/ESLint, Vitest 4, check rather than validate, no oxlint/Prettier or required ui:* scripts, ranged shadcn dependency. This is not a Node Project or Astro Site. Source and manifests unchanged.",
+              "explanation": "The root package.json is a client-rendered Vite 8 / React 19 App: the stream wall's selection, focused playback and keyboard handling are browser state (src/App.tsx, src/pages/stream-wall/stream-wall-page.tsx); owner classification on lutzseverino/repo-canon#560. It is not a Node Project, and it now belongs to typescript-vite-stack; no other package.json exists, so no scope is valid.",
               "evidence": [
                 "package.json",
-                "src/App.tsx",
                 "vite.config.ts",
-                "components.json"
+                "src/App.tsx"
               ],
               "additionalPaths": []
             }
@@ -2775,34 +1463,50 @@
         {
           "id": "typescript-vite-stack",
           "status": "satisfied",
-          "explanation": "No scope is valid: existing root App is deliberately excluded until separate #9 migration. npm/package-lock, Node >=24, TypeScript 5, Biome/ESLint, Vitest 4, check rather than validate, no oxlint/Prettier or required ui:* scripts, ranged shadcn dependency. This is not a Node Project or Astro Site. Source and manifests unchanged.",
+          "explanation": "Majors (node_modules after pnpm install --frozen-lockfile): Vite 8.1.0 with @vitejs/plugin-react, React 19.2.7, Tailwind CSS 4.3.1, TypeScript 7.0.2, Vitest 5.0.5 for the existing tests, oxlint 1.90.0, Prettier 3.9.10; no ESLint or Biome. package.json pins packageManager pnpm@11.28.9 with one root pnpm-lock.yaml and no App npm lockfile; engines.node is ^24 || ^26. validate runs format:check, lint (oxlint --type-aware --deny-warnings), typecheck, test:run, check:architecture, check:docs, ui:check and build; it neither calls nor replaces scripts/validate.mjs. pnpm validate passed locally on Node 24.22.0 and its log shows 'ui:check passed (2 files)', so ui:check actually executes. dependency-cruiser parses with a private TypeScript 6.0.3 (pnpm-workspace.yaml packageExtensions) because dependency-cruiser 18 reads 0 modules under TypeScript 7; the App compiles with 7.0.2, deliberate api->app, page->ui and custom->app imports failed check:architecture under that toolchain (PR #16), and the development guide records the parser. shadcn: components.json was created by the pinned CLI with style base-nova, iconLibrary lucide, baseColor neutral, CSS variables and the old aliases; shadcn 4.23.0 is an exact devDependency; ui:add and ui:update invoke it through scripts/ui-registry.mjs. Integrity: registry-manifest.json hashes every file in src/components/ui; ui:check fails on changed, missing and unexpected files (controls in PR #16 and scripts/ui-registry.test.mjs); ui:add and ui:update stop when the output has already drifted; Prettier and oxlint ignore the generated directory. Wrappers: pages import only src/components/app (dependency-cruiser rule registry-components-only-through-app); AppButton, AppIconButton and AppTooltip hold shared invariants (telemetry typography, glass icon treatment, 250 ms delay, 300 ms skip window, 10 px offset, Escape propagation) and forward props, ref, className and composition through Base UI render; the YouTube link stays an <a> via render with nativeButton={false}. Custom provider glyphs live in src/components/custom with rule custom-components-stay-below-app. No effect is shared by every component of a kind, so no data-slot stylesheet rule is needed: the glass treatment applies only to icon buttons through AppIconButton. Theme: light tokens in :root and dark tokens in .dark in src/theme/tokens.css, no .light; ThemeProvider and the index.html boot script toggle only .dark, with dark the default and saved light/dark/system honoured before first paint (boot capture in PR #16). The colour theme is the App's own and unchanged. CI: .github/workflows/ci.yml runs pnpm validate on Node.js 24 and 26 shards behind the Validate site gate; on PR #16 a Node-26-only failure and a skipped matrix both failed the gate (runs 41221134404, 41221230388), and the merged main commit ae16c06 produced Validate site plus both shards (run 41232376247, success). Setup and validation in docs/development/README.md names pnpm 11, Node.js 24/26, every validate step and its tool, and the required checks. UI before/after evidence (six paired views, tooltip timing, keyboard and link semantics) is in PR #16's body; Space also activates the Base UI non-native link button, recorded there as a limit.",
           "changedPaths": [],
           "evidence": [
             "package.json",
-            "src/App.tsx",
-            "vite.config.ts",
-            "components.json"
+            "pnpm-lock.yaml",
+            "pnpm-workspace.yaml",
+            "components.json",
+            "registry-manifest.json",
+            "scripts/ui-registry.mjs",
+            "scripts/ui-registry.test.mjs",
+            "dependency-cruiser.cjs",
+            ".oxlintrc.json",
+            ".prettierignore",
+            "src/components/app/app-tooltip.tsx",
+            "src/components/app/app-button.tsx",
+            "src/components/custom/provider-glyph.tsx",
+            "src/pages/stream-wall/stream-embed.tsx",
+            "src/theme/tokens.css",
+            "src/theme/ThemeProvider.tsx",
+            "index.html",
+            ".github/workflows/ci.yml",
+            "docs/development/README.md",
+            "src/App.tsx"
           ],
           "scopeValidity": {
             "afterFixes": {
               "status": "valid",
-              "explanation": "No scope is valid: existing root App is deliberately excluded until separate #9 migration. npm/package-lock, Node >=24, TypeScript 5, Biome/ESLint, Vitest 4, check rather than validate, no oxlint/Prettier or required ui:* scripts, ranged shadcn dependency. This is not a Node Project or Astro Site. Source and manifests unchanged.",
+              "explanation": "The root package.json is a client-rendered Vite 8 / React 19 App: the stream wall's selection, focused playback and keyboard handling are browser state (src/App.tsx, src/pages/stream-wall/stream-wall-page.tsx); owner classification on lutzseverino/repo-canon#560. It is the repository's only Project, a standalone root with workspace YAML holding settings only; no other package.json exists.",
               "evidence": [
                 "package.json",
+                "pnpm-workspace.yaml",
                 "src/App.tsx",
-                "vite.config.ts",
-                "components.json"
+                "src/pages/stream-wall/stream-wall-page.tsx"
               ],
               "additionalPaths": []
             },
             "current": {
               "status": "valid",
-              "explanation": "No scope is valid: existing root App is deliberately excluded until separate #9 migration. npm/package-lock, Node >=24, TypeScript 5, Biome/ESLint, Vitest 4, check rather than validate, no oxlint/Prettier or required ui:* scripts, ranged shadcn dependency. This is not a Node Project or Astro Site. Source and manifests unchanged.",
+              "explanation": "The root package.json is a client-rendered Vite 8 / React 19 App: the stream wall's selection, focused playback and keyboard handling are browser state (src/App.tsx, src/pages/stream-wall/stream-wall-page.tsx); owner classification on lutzseverino/repo-canon#560. It is the repository's only Project, a standalone root with workspace YAML holding settings only; no other package.json exists.",
               "evidence": [
                 "package.json",
+                "pnpm-workspace.yaml",
                 "src/App.tsx",
-                "vite.config.ts",
-                "components.json"
+                "src/pages/stream-wall/stream-wall-page.tsx"
               ],
               "additionalPaths": []
             }
@@ -2812,21 +1516,98 @@
     }
   ],
   "deferred": [],
-  "reused": [],
+  "reused": [
+    {
+      "id": "scope:github-repository-configuration",
+      "kind": "scope",
+      "evidence": {
+        "discovery": "05f27e38f22870239eac4f15f63d9ff758c87ff3c8c5098dc7b8cd66a5685616",
+        "rules": "af92edb138cd5e7ff7b86263e07493675a931ee9c6f2ef7fcf90405c0e4b9a63",
+        "draft": "none",
+        "paths": []
+      }
+    },
+    {
+      "id": "scope:project-readmes",
+      "kind": "scope",
+      "evidence": {
+        "discovery": "a2cf9e7206712b7b169ebcf901d40ded7fa655100b3afbcf825296e46291b47a",
+        "rules": "6cc1cbca7a629ab74c4e93b83f400cade77159aeb1bd2502463eafedb63a24fc",
+        "draft": "none",
+        "paths": []
+      }
+    },
+    {
+      "id": "assessment:git-attributes",
+      "kind": "assessment",
+      "evidence": {
+        "judgedAgainst": {
+          "kind": "rules",
+          "sha256": "ce8397df1a7819e7d8af6b65f48686f6cc0d798c361734b00535fbd60f292dcd"
+        },
+        "scope": {
+          "basis": "declaration",
+          "snapshot": "sha256:6a5046db4d39da5ec368797b2dc00a20464bc8552da9a851c58618dd0972c5ba"
+        }
+      }
+    },
+    {
+      "id": "assessment:project-agent-guidance",
+      "kind": "assessment",
+      "evidence": {
+        "judgedAgainst": {
+          "kind": "rules",
+          "sha256": "d28524380c291296b805f43440d09b437bc60edd390068bfbf552cdb8b982a25"
+        },
+        "scope": {
+          "basis": "declaration",
+          "snapshot": "sha256:67b9c06fe3913237451f2af02f10eb806dfdb18131c8e2639a769e21c37c3c9b"
+        }
+      }
+    },
+    {
+      "id": "assessment:project-readmes",
+      "kind": "assessment",
+      "evidence": {
+        "judgedAgainst": {
+          "kind": "rules",
+          "sha256": "6cc1cbca7a629ab74c4e93b83f400cade77159aeb1bd2502463eafedb63a24fc"
+        },
+        "scope": {
+          "basis": "declaration",
+          "snapshot": "sha256:f61bb6b747466f440a7bfe1ad8ac8d9c6cc81dd9a69aeeaef10fd61e5e7cfe89"
+        }
+      }
+    },
+    {
+      "id": "assessment:repository-license",
+      "kind": "assessment",
+      "evidence": {
+        "judgedAgainst": {
+          "kind": "rules",
+          "sha256": "0cae423be028b626f046212c2c7d6432a26ea454fa9917f8b37acdcf8601af2a"
+        },
+        "scope": {
+          "basis": "declaration",
+          "snapshot": "sha256:c8cddcc1981ee98a780e9d0201923b4c2e8d95a0b9a3d8b801f098eccddcbfe7"
+        }
+      }
+    }
+  ],
   "assessedScopes": {
-    "documentation": "sha256:f0572d54b28830173ed1b77544288d4700e020776ea6310e3c919a8b6b2973bf",
+    "documentation": "sha256:eebd9a797f40c9081bab4afab11e402649f10e2558eaceca2cb9789f8c79b35d",
     "git-attributes": "sha256:6a5046db4d39da5ec368797b2dc00a20464bc8552da9a851c58618dd0972c5ba",
     "github-repository-configuration": "sha256:f61bb6b747466f440a7bfe1ad8ac8d9c6cc81dd9a69aeeaef10fd61e5e7cfe89",
     "project-agent-guidance": "sha256:67b9c06fe3913237451f2af02f10eb806dfdb18131c8e2639a769e21c37c3c9b",
     "project-readmes": "sha256:f61bb6b747466f440a7bfe1ad8ac8d9c6cc81dd9a69aeeaef10fd61e5e7cfe89",
     "repository-license": "sha256:c8cddcc1981ee98a780e9d0201923b4c2e8d95a0b9a3d8b801f098eccddcbfe7",
-    "repository-readme": "sha256:a20dbe2033968e02e928a9d7709b578b8ef03e068b9953e57181ad25859142ae",
+    "repository-readme": "sha256:207f0bb1138c2d291fb5e80a873fea7797ad524b0e2394f5dc2ed32445b3b69e",
     "typescript-astro-stack": "sha256:f61bb6b747466f440a7bfe1ad8ac8d9c6cc81dd9a69aeeaef10fd61e5e7cfe89",
     "typescript-node-stack": "sha256:f61bb6b747466f440a7bfe1ad8ac8d9c6cc81dd9a69aeeaef10fd61e5e7cfe89",
-    "typescript-vite-stack": "sha256:f61bb6b747466f440a7bfe1ad8ac8d9c6cc81dd9a69aeeaef10fd61e5e7cfe89"
+    "typescript-vite-stack": "sha256:d9c6255e05e5a7ce2133c7c36df69b6991444144d8113d2dacdb4162195a939a"
   },
   "impact": {
-    "derived": "Initial adoption: the run asks for contextual work on documentation, git-attributes, github-repository-configuration, project-agent-guidance, project-readmes, repository-license, repository-readme, typescript-astro-stack, typescript-node-stack, typescript-vite-stack, which needs review before it is committed.",
+    "derived": "Contextual update: the run asks for contextual work on documentation, github-repository-configuration, repository-readme, typescript-astro-stack, typescript-node-stack, typescript-vite-stack, which needs review before it is committed.",
     "releases": [
       {
         "version": "v0.20.0",
@@ -2834,8 +1615,8 @@
       }
     ],
     "steps": [
-      "Review the contextual work on documentation, git-attributes, github-repository-configuration, project-agent-guidance, project-readmes, repository-license, repository-readme, typescript-astro-stack, typescript-node-stack, typescript-vite-stack.",
-      "Review and commit the adoption."
+      "Review the contextual work on documentation, github-repository-configuration, repository-readme, typescript-astro-stack, typescript-node-stack, typescript-vite-stack.",
+      "Review and commit the update."
     ]
   }
 }

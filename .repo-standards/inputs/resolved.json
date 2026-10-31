@@ -67,13 +67,6 @@
       "targets": {
         "paths": [
           "docs/README.md",
-          "docs/_templates/README.md",
-          "docs/_templates/decision.template.md",
-          "docs/_templates/explanation.template.md",
-          "docs/_templates/how-to.template.md",
-          "docs/_templates/index.template.md",
-          "docs/_templates/reference.template.md",
-          "docs/_templates/tutorial.template.md",
           "docs/development/README.md",
           "docs/development/architecture/README.md",
           "docs/development/architecture/architecture.md",
@@ -84,12 +77,6 @@
           "docs/development/templates/index.template.md",
           "docs/development/templates/reference.template.md",
           "docs/development/templates/tutorial.template.md",
-          "docs/explanation/README.md",
-          "docs/explanation/architecture.md",
-          "docs/how-to/README.md",
-          "docs/how-to/run-locally.md",
-          "docs/reference/README.md",
-          "docs/reference/live-feed.md",
           "docs/usage/README.md",
           "docs/usage/guides/README.md",
           "docs/usage/guides/run-locally.md",
@@ -721,15 +708,40 @@
     },
     {
       "id": "typescript-vite-stack",
-      "checks": [],
+      "checks": [
+        {
+          "id": "typescript-vite-stack-manifests",
+          "run": {
+            "executable": "node",
+            "script": "operations/check-typescript-vite-stack.mjs",
+            "resources": [
+              "operations/lib/typescript-node-stack.mjs",
+              "operations/lib/stack-files.mjs",
+              "operations/lib/typescript-web-stack.mjs",
+              "operations/lib/stack-check.mjs",
+              "operations/lib/local-markdown-links.mjs"
+            ],
+            "arguments": []
+          },
+          "prerequisite": {
+            "version-arguments": [
+              "--version"
+            ],
+            "version": ">=24.0.0 <25.0.0 || >=26.0.0 <27.0.0"
+          },
+          "timeout-seconds": 30
+        }
+      ],
       "fixes": [],
       "kind": "repository",
       "guidance": "guidance/typescript-vite-stack.md",
+      "rules": "rules/typescript-web-stacks.md",
       "targets": {
-        "paths": [],
+        "paths": [
+          "package.json"
+        ],
         "directories": []
-      },
-      "no-scope": true
+      }
     },
     {
       "id": "validator-command",

@@ -6,13 +6,6 @@ Run `repo-standards rules <path>` to print the rules that cover a path.
 
 - [`documentation`](documentation.md) covers:
   - `docs/README.md`
-  - `docs/_templates/README.md`
-  - `docs/_templates/decision.template.md`
-  - `docs/_templates/explanation.template.md`
-  - `docs/_templates/how-to.template.md`
-  - `docs/_templates/index.template.md`
-  - `docs/_templates/reference.template.md`
-  - `docs/_templates/tutorial.template.md`
   - `docs/development/README.md`
   - `docs/development/architecture/README.md`
   - `docs/development/architecture/architecture.md`
@@ -23,12 +16,6 @@ Run `repo-standards rules <path>` to print the rules that cover a path.
   - `docs/development/templates/index.template.md`
   - `docs/development/templates/reference.template.md`
   - `docs/development/templates/tutorial.template.md`
-  - `docs/explanation/README.md`
-  - `docs/explanation/architecture.md`
-  - `docs/how-to/README.md`
-  - `docs/how-to/run-locally.md`
-  - `docs/reference/README.md`
-  - `docs/reference/live-feed.md`
   - `docs/usage/README.md`
   - `docs/usage/guides/README.md`
   - `docs/usage/guides/run-locally.md`
@@ -44,3 +31,5 @@ Run `repo-standards rules <path>` to print the rules that cover a path.
   - `LICENSE`
 - [`repository-readme`](repository-readme.md) covers:
   - `README.md`
+- [`typescript-vite-stack`](typescript-vite-stack.md) covers:
+  - `package.json`
