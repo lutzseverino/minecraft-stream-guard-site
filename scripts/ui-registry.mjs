@@ -94,6 +94,22 @@ function runShadcn(root, args) {
   }
 }
 
+// Regenerating records the current bytes, so start only from clean output;
+// otherwise a hand edit or stray file would become the new baseline.
+function requireCleanRegistry(root, command) {
+  const problems = checkRegistry(root);
+  if (problems.length === 0) {
+    return;
+  }
+  for (const problem of problems) {
+    console.error(problem);
+  }
+  console.error(
+    `ui:${command} stopped: generated output already differs from ${manifestName}. Restore it before regenerating.`,
+  );
+  process.exit(1);
+}
+
 function main() {
   const root = fileURLToPath(new URL("../", import.meta.url));
   const [command, ...names] = process.argv.slice(2);
@@ -118,15 +134,18 @@ function main() {
       console.error("Usage: pnpm ui:add <component...>");
       process.exit(1);
     }
-    const components = existsSync(path.join(root, manifestName))
-      ? readManifest(root).components
-      : [];
+    const hasManifest = existsSync(path.join(root, manifestName));
+    if (hasManifest) {
+      requireCleanRegistry(root, command);
+    }
+    const components = hasManifest ? readManifest(root).components : [];
     runShadcn(root, [...names, "--yes"]);
     writeManifest(root, new Set([...components, ...names]));
     return;
   }
 
   if (command === "update") {
+    requireCleanRegistry(root, command);
     const { components, files } = readManifest(root);
     runShadcn(root, [...components, "--overwrite", "--yes"]);
     // Refresh only what is recorded; new files mean the registry grew.

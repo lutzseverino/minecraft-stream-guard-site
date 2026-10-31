@@ -33,6 +33,7 @@ dependency-cruiser 18 reads TypeScript through the compiler API, which TypeScrip
 
 - `pnpm ui:add <component>` adds components with the pinned shadcn CLI and records them.
 - `pnpm ui:update` refreshes only the recorded components and fails if the refresh creates unrecorded files.
+- Both stop before running the CLI when `ui:check` fails, so a hand edit or stray file never becomes the recorded baseline.
 
 Pages use registry components through `src/components/app/`. Custom components the registry has no match for, such as the provider glyphs, live in `src/components/custom/`.
 

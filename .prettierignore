@@ -25,8 +25,7 @@
 /dist/
 pnpm-lock.yaml
 
-# Outside the formatted scope, as under Biome: documentation, workflows and
-# assets.
+# Outside the formatted scope: documentation, workflows and assets.
 *.md
 *.yml
 *.yaml
