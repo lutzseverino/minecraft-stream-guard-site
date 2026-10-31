@@ -14,7 +14,7 @@
       "eslint.config.mjs",
       "index.html",
       "package.json",
-      "scripts/**/*.mjs",
+      "scripts/check-docs.mjs",
       "src/**/*.css",
       "src/**/*.ts",
       "src/**/*.tsx",
