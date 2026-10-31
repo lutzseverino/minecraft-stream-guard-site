@@ -7,11 +7,13 @@
  * / data text is UMD amber, after the under-monitor displays on a video wall.
  *
  * There is deliberately no public runtime config file. Customize the wall by
- * editing the tokens below, the shadcn primitives, or the Tailwind classes.
+ * editing the tokens below, the App wrappers in `components/app`, or the
+ * Tailwind classes. Generated `components/ui` output is never edited by hand.
  *
  * Dark is the only first-class surface (a video wall is dark so the screens pop)
- * and the default; the light tokens exist for completeness. `ThemeProvider`
- * switches between them with the `.dark` class.
+ * and the default; the light tokens in `:root` exist for completeness. Only the
+ * `.dark` class switches themes, set by `ThemeProvider` and the boot script in
+ * index.html.
  */
 @custom-variant dark (&:is(.dark *));
 
@@ -51,8 +53,6 @@
   --radius-xl: calc(var(--radius) + 8px);
 }
 
-/* Light tokens. `.dark` (below) overrides them; ThemeProvider and the boot
-   script in index.html toggle only that class. */
 :root {
   --background: oklch(0.95 0.003 250);
   --foreground: oklch(0.2 0.006 250);
@@ -81,7 +81,7 @@
   --radius: 0.375rem;
 }
 
-/* Dark "gallery" surface: the default, applied before first paint. */
+/* Dark "gallery" surface is the default. */
 .dark {
   --background: oklch(0.17 0.004 250); /* graphite rack */
   --foreground: oklch(0.97 0.003 250); /* signal white */

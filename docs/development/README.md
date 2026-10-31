@@ -21,9 +21,9 @@ The required checks are `Validate site` from CI, which runs `validate` on Node.j
 
 ### Lint and format coverage
 
-oxlint carries over the typed rules, React hooks rules and react-refresh export rule from the old ESLint setup. Its `correctness` category replaces Biome's recommended rules. Not carried over: Biome's import organizing, its CSS and JSON linting (Prettier still formats both), and Biome rules without an oxlint equivalent. `react/set-state-in-effect` is off: ESLint never enforced it, and the wall's effect that closes a stream when it goes off air violates it.
+`.oxlintrc.json` enables oxlint's `correctness` category, the typed TypeScript rules, the React hooks rules and the react-refresh export rule. oxlint does not organize imports or lint CSS and JSON; Prettier formats CSS and JSON. `react/set-state-in-effect` is off, because the wall's effect that closes a stream when it goes off air calls `setState`.
 
-Prettier and oxlint skip Repo Canon-owned files (`.prettierignore`, `.oxlintrc.json`), generated registry output and, as under Biome, Markdown, YAML and workflows.
+`.prettierignore` and the `ignorePatterns` in `.oxlintrc.json` exclude Repo Canon-owned files and generated registry output. Prettier also leaves Markdown, YAML and workflows unformatted.
 
 dependency-cruiser 18 reads TypeScript through the compiler API, which TypeScript 7 does not ship, so `pnpm-workspace.yaml` gives it a private TypeScript 6 to parse with. The App itself compiles with TypeScript 7.
 

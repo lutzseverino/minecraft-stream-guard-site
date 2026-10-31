@@ -9,12 +9,13 @@ import {
 
 type AppTooltipProviderProps = Readonly<ComponentProps<typeof TooltipProvider>>;
 
-type AppTooltipProps = Readonly<{
-  /** The trigger element; it renders in place of Base UI's own trigger. */
-  children: ReactElement<Record<string, unknown>>;
-  label: string;
-  side?: ComponentProps<typeof TooltipContent>["side"];
-}>;
+type AppTooltipProps = Readonly<
+  Omit<ComponentProps<typeof TooltipContent>, "children"> & {
+    /** The trigger element; it renders in place of Base UI's own trigger. */
+    children: ReactElement<Record<string, unknown>>;
+    label: string;
+  }
+>;
 
 /*
  * Hover opens after 250 ms; keyboard focus opens at once. A tooltip opened
@@ -39,12 +40,18 @@ const letEscapeReachPage: ComponentProps<typeof Tooltip>["onOpenChange"] = (
   }
 };
 
-function AppTooltip({ children, label, side = "bottom" }: AppTooltipProps) {
+function AppTooltip({
+  children,
+  label,
+  side = "bottom",
+  // Keeps the 10 px trigger gap the wall had under Radix (base-nova uses 4).
+  sideOffset = 10,
+  ...props
+}: AppTooltipProps) {
   return (
     <Tooltip onOpenChange={letEscapeReachPage}>
       <TooltipTrigger render={children} />
-      {/* Keeps the 10 px trigger gap the wall had under Radix (base-nova uses 4). */}
-      <TooltipContent side={side} sideOffset={10}>
+      <TooltipContent side={side} sideOffset={sideOffset} {...props}>
         {label}
       </TooltipContent>
     </Tooltip>
