@@ -2,7 +2,7 @@ import type { LiveStreamer } from "@/api/live-feed";
 import {
   ProviderGlyph,
   providerAccentClass,
-} from "@/components/app/provider-glyph";
+} from "@/components/custom/provider-glyph";
 import { TallyLight } from "@/pages/stream-wall/tally-light";
 
 interface StationIdentProps {

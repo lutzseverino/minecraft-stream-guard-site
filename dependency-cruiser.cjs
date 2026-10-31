@@ -22,6 +22,22 @@ module.exports = {
       to: { path: "^src/(?:api|components/app|pages|theme)/" },
     },
     {
+      name: "registry-components-only-through-app",
+      severity: "error",
+      comment:
+        "Pages and other code use shadcn primitives through components/app wrappers.",
+      from: { path: "^src/", pathNot: "^src/components/(?:app|ui)/" },
+      to: { path: "^src/components/ui/" },
+    },
+    {
+      name: "custom-components-stay-below-app",
+      severity: "error",
+      comment:
+        "Custom components such as provider glyphs sit outside the wrapper layer and below pages.",
+      from: { path: "^src/components/custom/" },
+      to: { path: "^src/(?:components/(?:app|ui)|pages|theme)/" },
+    },
+    {
       name: "app-components-do-not-reach-pages",
       severity: "error",
       comment:

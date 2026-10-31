@@ -9,7 +9,7 @@ import {
   ProviderGlyph,
   providerAccentClass,
   providerLabel,
-} from "@/components/app/provider-glyph";
+} from "@/components/custom/provider-glyph";
 import { StationIdent } from "@/pages/stream-wall/station-ident";
 
 interface StreamEmbedProps {
@@ -76,11 +76,16 @@ function LinkFallback({ streamer }: { streamer: LiveStreamer }) {
           No inline player available for this channel
         </p>
       </div>
-      <AppButton asChild>
-        <a href={streamer.url} target="_blank" rel="noreferrer noopener">
-          Watch on {providerLabel(streamer.provider)}
-          <ExternalLink />
-        </a>
+      <AppButton
+        nativeButton={false}
+        // Base UI gives non-native buttons role="button"; keep link semantics.
+        role="link"
+        render={
+          <a href={streamer.url} target="_blank" rel="noreferrer noopener" />
+        }
+      >
+        Watch on {providerLabel(streamer.provider)}
+        <ExternalLink />
       </AppButton>
     </div>
   );
