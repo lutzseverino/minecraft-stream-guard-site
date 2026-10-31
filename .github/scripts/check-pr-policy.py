@@ -28,6 +28,10 @@ def validate(branch: str, title: str, body: str, author: str) -> list[str]:
         )
     if not TITLE.fullmatch(title):
         errors.append("pull-request title must be a Conventional Commit subject")
+    # Repo Canon validates adoption records with its installed metadata check.
+    if (title.startswith("chore: adopt repo-canon ")
+            and body.startswith("# Repository Standards adoption record\n")):
+        return errors
     if not ISSUE.search(body):
         errors.append("pull-request body must contain a line in the form: Closes #123")
     for heading in HEADINGS:
